@@ -1,5 +1,5 @@
 import Layout from "@components/layout";
-import CourseGrid from "@components/course-grid";
+
 import Seo from "@components/seo/seo";
 
 export default function CourceListPage() {
@@ -11,7 +11,7 @@ export default function CourceListPage() {
         path="cources"
       />
 
-      <CourseGrid />
+      {/* <CourseGrid /> */}
     </>
   );
 }
