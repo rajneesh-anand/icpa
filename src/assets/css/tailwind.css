@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 2, 178, 144;
+    --color-orange: 255, 102, 82;
+    --color-yellow: 255, 195, 60;
+    --color-base: 0, 0, 0;
+    --color-fill: 255, 255, 255;
+  }
+}
+
+@layer components {
+  .btn-orange {
+    @apply text-[14px] h-[40px] w-[40px] leading-[4px] bg-orange text-white text-center rounded-[50px] hover:bg-orange/75;
+  }
+
+  .navMenu > a::before {
+    @apply absolute bg-orange;
+    content: "";
+    height: 3px;
+    transition: all 0.5s ease-in-out 0.3s;
+    bottom: -8px;
+  }
+
+  .navMenu:hover > a::before {
+    @apply w-full right-auto left-0;
+  }
+
+  .navMenu:hover > .subMenu {
+    visibility: visible;
+    top: calc(100% + 2px);
+  }
+
+  .subMenu {
+    visibility: hidden;
+    transition: all 0.4s;
+    top: calc(100% + 21px);
+  }
+
+  .subMenuChild {
+    transition: all 0.3s;
+  }
+
+  .subMenu li:hover > .subMenuChild {
+    @apply opacity-100 visible -top-3;
+  }
+}

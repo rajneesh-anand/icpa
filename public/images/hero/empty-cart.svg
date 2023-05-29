@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="351.877px" height="433.126px" viewBox="0 0 351.877 433.126" enable-background="new 0 0 351.877 433.126"
+	 xml:space="preserve">
+<image display="none" overflow="visible" width="131" height="164" xlink:href="cart-with-sad-face.png"  transform="matrix(2.6401 0 0 2.6401 0.625 -0.999)">
+</image>
+<rect x="118.838" y="312.001" fill="#999999" width="106" height="12"/>
+<polygon fill="none" stroke="#999999" stroke-width="12" points="345.483,427.126 6.345,427.126 22.838,131.867 326.838,134.669 "/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="57.838" y="0" width="212.666" height="100.667"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<path fill="#999999" d="M173.838,203.428c-48.156,0-87.333-45.125-87.333-100.59c0-55.466,39.178-100.591,87.333-100.591
+			c48.156,0,87.334,45.125,87.334,100.591C261.172,158.304,221.995,203.428,173.838,203.428z M173.838,14.247
+			c-41.539,0-75.333,39.742-75.333,88.591c0,48.849,33.794,88.59,75.333,88.59s75.334-39.741,75.334-88.59
+			C249.172,53.989,215.377,14.248,173.838,14.247z"/>
+	</g>
+</g>
+<ellipse fill="#999999" cx="113.171" cy="251.671" rx="12" ry="19.667"/>
+<ellipse fill="#999999" cx="237.171" cy="251.671" rx="12" ry="19.667"/>
+</svg>
