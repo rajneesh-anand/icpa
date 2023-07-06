@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
-import FacebookProvider from "next-auth/providers/facebook";
-import EmailProvider from "next-auth/providers/email";
+// import GoogleProvider from "next-auth/providers/google";
+// import FacebookProvider from "next-auth/providers/facebook";
+// import EmailProvider from "next-auth/providers/email";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { compareSync } from "bcrypt";
 import prisma from "@utils/prisma";
@@ -54,14 +54,14 @@ export default (req, res) =>
         },
       }),
 
-      GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      }),
-      FacebookProvider({
-        clientId: process.env.FACEBOOK_CLIENT_ID,
-        clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-      }),
+      // GoogleProvider({
+      //   clientId: process.env.GOOGLE_CLIENT_ID,
+      //   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      // }),
+      // FacebookProvider({
+      //   clientId: process.env.FACEBOOK_CLIENT_ID,
+      //   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      // }),
     ],
 
     adapter: PrismaAdapter(prisma),
