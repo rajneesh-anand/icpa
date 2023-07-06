@@ -35,12 +35,12 @@ export default function CourseDetailTab({ list }) {
           <Tab.Panel>
             {list.map((item, index) => (
               <div key={index} className="ml-2">
-                <p className="px-4 py-2 rounded bg-indigo-100 mb-2 font-medium text-[18px] text-slate-700">
+                <p className="px-4 py-2 rounded bg-indigo-100 mb-2 font-semibold text-[18px] text-slate-700">
                   {item.unit_name}
                 </p>
                 {item.unit_chapters.map((itm, idx) => (
                   <div key={idx} className="ml-2">
-                    <p className="px-4 mb-2 font-normal text-[16px] text-slate-700/60">
+                    <p className="px-4 mb-2 font-normal text-[16px] font-medium text-slate-700/90">
                       {itm.chapter_name}
                     </p>
                   </div>

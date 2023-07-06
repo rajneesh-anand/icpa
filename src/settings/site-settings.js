@@ -4,11 +4,11 @@ export const siteSettings = {
     "Geenia International is here to serve you better products for you we are in this Industry from many years and continuosly  upgrading products as per the environment",
   author: {
     name: "ICPA Institute",
-    websiteUrl: "https://geenia.in",
+    websiteUrl: "https://icpainstitute.com",
     address: "",
   },
   logo: {
-    url: "/images/logo.svg",
+    url: "/images/logo.jpg",
     alt: "icpa-institute",
     href: "/",
   },
