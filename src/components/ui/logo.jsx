@@ -15,8 +15,8 @@ const Logo = ({ className, href = siteSettings.logo.href, ...props }) => {
       <Image
         src={siteSettings.logo.url}
         alt={siteSettings.logo.alt}
-        height={windowSize.width > 768 ? 40 : 32}
-        width={windowSize.width > 768 ? 104 : 72}
+        height={windowSize.width > 768 ? 64 : 52}
+        width={windowSize.width > 768 ? 112 : 88}
         layout="fixed"
         loading="eager"
       />

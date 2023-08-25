@@ -30,29 +30,28 @@ const Header = () => {
 
   return (
     <>
-      <header
-        className={`${
-          sticky
-            ? "header-sticky"
-            : "py-[8px] bg-[#f0f0fe] border-b border-[#f0f0fe]"
-        }`}
-      >
-        <Container className="flex items-center">
-          <Logo />
-
-          <NavMenu data={site_header.menu} />
-          <AuthMenu
-            btnProps={{
-              onClick: handleLogin,
-            }}
-          />
-          <button
-            onClick={handleMobileMenu}
-            className="btn-orange lg:hidden block ml-auto"
-          >
-            <i className="fi fi-rr-menu-burger"></i>
-          </button>
-        </Container>
+      <header className={sticky ? "header-sticky" : ""}>
+        <div className="flex justify-between items-center h-16 relative ">
+          <div className="pl-4 md:pl-6 lg:pl-8 2xl:pl-1 lg:w-[240px] bg-white h-full flex items-center">
+            <Logo />
+          </div>
+          <div className="hidden lg:flex lg:justify-end lg:items-center pr-4 md:pr-6 lg:pr-8 2xl:pr-1 w-full h-full bg-yellow">
+            <NavMenu data={site_header.menu} />
+            <AuthMenu
+              btnProps={{
+                onClick: handleLogin,
+              }}
+            />
+          </div>
+          <div className="lg:hidden bg-yellow h-full flex justify-end items-center w-full">
+            <button
+              onClick={handleMobileMenu}
+              className="btn-purple block mr-4"
+            >
+              <i className="fi fi-rr-menu-burger"></i>
+            </button>
+          </div>
+        </div>
       </header>
 
       <Drawer

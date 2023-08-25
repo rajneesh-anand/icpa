@@ -18,11 +18,12 @@ export const selectStyles = {
   control: (_, state) => ({
     display: "flex",
     alignItems: "center",
+    justifyContent: "end",
     minHeight: "2rem",
     backgroundColor: "#ffffff",
-    borderRadius: 5,
-    border: "1px solid #F1F1F1",
-    borderColor: state.isFocused ? "rgb(var(--color-gray-500))" : "#F1F1F1",
+    borderRadius: 2,
+    border: "1px solid #000000",
+    borderColor: state.isFocused ? "rgb(var(--color-gray-500))" : "#000000",
     boxShadow:
       state.menuIsOpen &&
       "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
@@ -64,6 +65,7 @@ export const selectStyles = {
     fontSize: "0.875rem",
     fontWeight: 600,
     color: "rgb(var(--text-heading))",
+    textAlign: "left",
   }),
   multiValue: (provided, _) => ({
     ...provided,

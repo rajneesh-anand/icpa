@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -19,6 +20,7 @@ module.exports = {
         yellow: withOpacity("--color-yellow"),
         orange: withOpacity("--color-orange"),
         white: "#ffffff",
+        purple: withOpacity("--color-purple"),
       },
       textColor: {
         primary: withOpacity("--color-primary"),
@@ -38,6 +40,9 @@ module.exports = {
         dropDown: "0px 10px 40px rgba(41, 50, 68, 0.15)",
         cookies: "0 -2px 3px rgba(0, 0, 0, 0.04)",
         contact: "0 1px 10px rgba(75, 90, 130, 0.1)",
+      },
+      fontFamily: {
+        noto: ['"Noto Sans", sans - serif'],
       },
     },
   },

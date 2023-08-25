@@ -933,7 +933,7 @@ export const courseData = [
   },
   {
     id: 2,
-    title: "Diploma in Computer Application",
+    title: "Diploma in Computer Application and Engineering Volume Two",
     slug: "diploma-in-computer-application",
     course_type: "paid",
     price: "100",

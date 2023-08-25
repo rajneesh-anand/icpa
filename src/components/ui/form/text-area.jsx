@@ -3,10 +3,10 @@ import cn from "classnames";
 
 const variantClasses = {
   normal:
-    "bg-white border border-gray-100 focus:shadow focus:outline-none focus:border-heading",
+    "bg-white border border-gray-700 focus:shadow focus:outline-none focus:border-heading",
   solid:
     "border border-gray-100 focus:bg-white focus:border-2 focus:border-primary",
-  outline: "border border-gray-300 focus:border-primary",
+  outline: "border border-gray-700 focus:border-primary",
 };
 
 const TextArea = React.forwardRef((props, ref) => {

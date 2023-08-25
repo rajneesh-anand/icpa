@@ -23,7 +23,7 @@ const AuthMenu = ({ btnProps }) => {
             My Account
           </span>
           <svg
-            className="w-3 h-3 shrink-0 ml-1 fill-current text-gray-400"
+            className="w-3 h-3 shrink-0 ml-1 fill-current text-gray-200"
             viewBox="0 0 12 12"
           >
             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
@@ -77,7 +77,7 @@ const AuthMenu = ({ btnProps }) => {
     </Menu>
   ) : (
     <button
-      className="btn-orange hidden lg:block lg:ml-8"
+      className="btn-purple hidden lg:block lg:ml-8"
       aria-label="Authentication"
       {...btnProps}
     >

@@ -1,17 +1,12 @@
 const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
-  const baseUrl = "https://geenia.in";
+  const baseUrl = "https://icpainstitute.com";
 
   const staticPages = [
-    "https://geenia.in/products/bodycare",
-    "https://geenia.in/products/skincare",
-    "https://geenia.in/products/phy",
-    "https://geenia.in/products/haircare",
-    "https://geenia.in/products/makeup",
-    "https://geenia.in/about",
-    "https://geenia.in/contact",
-    "https://geenia.in/faq",
+    "https://icpainstitute.com/about",
+    "https://icpainstitute.com/contact",
+    "https://icpainstitute.com/faq",
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

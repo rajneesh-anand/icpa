@@ -87,7 +87,7 @@ export const footer = {
     },
     {
       id: 4,
-      path: "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+      path: "https://www.youtube.com",
       image: "/images/social/youtube.svg",
       name: "youtube",
       width: 24,
@@ -95,7 +95,7 @@ export const footer = {
     },
     {
       id: 5,
-      path: "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+      path: "https://www.youtube.com",
       image: "/images/social/whatsapp.svg",
       name: "whatsapp",
       width: 24,
@@ -103,7 +103,7 @@ export const footer = {
     },
     {
       id: 6,
-      path: "https://www.youtube.com/channel/UCjld1tyVHRNy_pe3ROLiLhw",
+      path: "https://www.youtube.com/",
       image: "/images/social/telegram.svg",
       name: "telegram",
       width: 24,

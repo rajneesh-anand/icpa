@@ -139,19 +139,22 @@ export default function MobileMenu() {
   return (
     <>
       <div className="flex flex-col w-full h-full">
-        <div className="w-full bg-yellow/50 border-b border-yellow flex justify-between items-center relative ltr:pl-5 rtl:pr-5 md:ltr:pl-7 md:rtl:pr-7 shrink-0 py-0.5">
-          <div role="button" onClick={closeSidebar} className="inline-flex">
-            <Logo />
-          </div>
-
+        <button
+          className="flex text-2xl items-center justify-end px-4 md:px-5 py-5 lg:py-8 focus:outline-none transition-opacity hover:opacity-60"
+          onClick={closeSidebar}
+          aria-label="close"
+        >
+          <CloseIcon className="text-gray-500 mt-0.5" color="#000000" />
+        </button>
+        {/* <div className="w-full bg-yellow/50 border-b border-yellow flex justify-between items-center relative ltr:pl-5 rtl:pr-5 md:ltr:pl-7 md:rtl:pr-7 shrink-0 py-0.5">
           <button
             className="flex text-2xl items-center justify-center px-4 md:px-5 py-5 lg:py-8 focus:outline-none transition-opacity hover:opacity-60"
             onClick={closeSidebar}
             aria-label="close"
           >
-            <CloseIcon className="text-gray-500 mt-0.5" />
+            <CloseIcon className="text-gray-500 mt-0.5" color="#000000" />
           </button>
-        </div>
+        </div> */}
         {session ? (
           <div className="border-b border-gray-200">
             <div className="text-center">
@@ -211,7 +214,7 @@ export default function MobileMenu() {
               <li className="px-4 pb-2">
                 <button
                   type="button"
-                  className="py-[4px] px-[8px]  bg-orange/90 rounded-sm text-[14px] text-white "
+                  className="py-[4px] px-[16px]  bg-orange/90 rounded-sm text-[14px] text-white "
                   onClick={handleLogin}
                 >
                   Sign In

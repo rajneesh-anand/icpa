@@ -24,13 +24,15 @@ const Layout = ({ children }) => {
     <div className="flex flex-col min-h-screen">
       {highlightedBar !== "true" && (
         <HighlightedBar
+          variant="purple"
           onClose={() => setHighlightedBar("true")}
-          className="text-slate-600"
+          className="text-white"
         >
-          <div className="text-sm font-medium py-0.5 pr-6">
+          <div className="text-[12px] lg:text-[14px] font-medium py-0.5 pr-6">
             <span>
-              Upto 50% discount on career oriented professional courses
-              <Link
+              Are you confused about right course for better job opportunities ?
+              Get free consultation By Vinay Sir
+              {/* <Link
                 href="/"
                 className="inline-flex text-xs uppercase font-bold pl-1.5 items-center relative transition-all top-[1px] hover:opacity-80"
               >
@@ -38,7 +40,7 @@ const Layout = ({ children }) => {
                   Learn More
                 </span>
                 <i className="fi fi-rr-arrow-circle-right"></i>
-              </Link>
+              </Link> */}
             </span>
           </div>
         </HighlightedBar>

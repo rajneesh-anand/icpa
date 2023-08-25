@@ -4,7 +4,7 @@ import cn from "classnames";
 
 const NavMenu = ({ data, className }) => {
   return (
-    <nav className={cn("hidden ml-auto lg:flex lg:items-center  ", className)}>
+    <nav className={cn("flex items-center  ", className)}>
       {data?.map((item, idx) => (
         <div
           className={`navMenu group cursor-pointer py-1.5  ml-4 relative`}
@@ -12,7 +12,7 @@ const NavMenu = ({ data, className }) => {
         >
           <Link
             href={item.path}
-            className="uppercase font-medium  text-sm lg:text-[14px] text-sky-800 py-2 hover:text-orange"
+            className="uppercase font-bold  text-sm lg:text-[14px] text-[#1E469E] py-2 hover:text-indigo-900"
           >
             {item.label}
           </Link>

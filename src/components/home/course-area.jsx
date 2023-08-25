@@ -1,106 +1,98 @@
-import course_data from "@data/course-data";
-import Link from "next/link";
-import React from "react";
+import { useState, useEffect } from "react";
+import CourseCard from "@components/home/course-card";
+import cn from "classnames";
+import { courseData } from "@data/course";
+import Container from "@components/ui/container";
 
-const CourseArea = () => {
+export const CourseFilter = () => {
+  const [data, setData] = useState();
+  const [buttonText, setButtonText] = useState("all");
+
+  useEffect(() => {
+    if (buttonText === "paid") {
+      const filterData = courseData.filter(
+        (item) => item.course_type === "paid"
+      );
+      setData(filterData);
+    } else if (buttonText === "free") {
+      const filterData = courseData.filter(
+        (item) => item.course_type === "free"
+      );
+      setData(filterData);
+    } else {
+      setData(courseData);
+    }
+  }, [buttonText]);
+
   return (
     <>
-      <section
-        className="course-area pt-115 pb-110 wow fadeInUp"
-        data-wow-duration=".8s"
-        data-wow-delay=".4s"
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="section-title mb-65">
-                <h2 className="tp-section-title mb-20">
-                  Explore Popular Courses
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            {course_data.map((item) => (
-              <div key={item.id} className="col-xl-4 col-lg-6 col-md-6">
-                <div className="tpcourse mb-40">
-                  <div className="tpcourse__thumb p-relative w-img fix">
-                    <Link href={item.course_link}>
-                      <img src={item.img} alt="course-thumb" />
-                    </Link>
-                    <div className="tpcourse__tag">
-                      <Link href={item.course_link}>
-                        <i className="fi fi-rr-heart"></i>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="tpcourse__content">
-                    <div className="tpcourse__avatar d-flex align-items-center mb-20">
-                      <img src={item.icon} alt="course-avata" />
-                      <h4 className="tpcourse__title">
-                        <Link href={item.course_link}>{item.title}</Link>
-                      </h4>
-                    </div>
-                    <div className="tpcourse__meta pb-15 mb-20">
-                      <ul className="d-flex align-items-center">
-                        <li>
-                          <img
-                            src="/assets/img/icon/c-meta-01.png"
-                            alt="meta-icon"
-                          />
-                          <span>{item.cls_text}</span>
-                        </li>
-                        <li>
-                          <img
-                            src="/assets/img/icon/c-meta-02.png"
-                            alt="meta-icon"
-                          />
-                          <span>{item.st_text}</span>
-                        </li>
-                        <li>
-                          <img
-                            src="/assets/img/icon/c-meta-03.png"
-                            alt="meta-icon"
-                          />
-                          <span>{item.start_text}</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="tpcourse__category d-flex align-items-center justify-content-between">
-                      <ul className="tpcourse__price-list d-flex align-items-center">
-                        <li>
-                          <Link href={item.course_link}>
-                            {item.course_title}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={item.course_link}>
-                            {item.course_name}
-                          </Link>
-                        </li>
-                      </ul>
-                      <h5 className="tpcourse__course-price">
-                        ${item.course_price}
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="row text-center">
-            <div className="col-lg-12">
-              <div className="course-btn mt-20">
-                <Link className="tp-btn" href="/course-details">
-                  Browse All Courses
-                </Link>
+      <section className="py-28 relative">
+        <div className="overflow-hidden">
+          <img
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/images/img-2.jpg"
+            alt="build your website image"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-indigo-800 w-full h-full opacity-90"></div>
+        </div>
+        <div className="container ">
+          <div className="lg:flex justify-center">
+            <div className="lg:w-7/12 text-center relative">
+              <div className="space-y-6">
+                <h2 className="text-white text-3xl">Explore Our Courses</h2>
+                <div className="h-0.5 bg-red-500 w-14 mx-auto"></div>
+                <p className="text-gray-300/90">
+                  Job oriented courses for working professional and college
+                  students @ very affordable price
+                </p>
               </div>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0">
+          <img
+            src="/images/bg-pattern-light.png"
+            alt="bg-pattern-light"
+            className="block dark:hidden"
+          />
+          <img
+            src="/images/bg-pattern-dark2.png"
+            alt="bg-pattern-light"
+            className="hidden dark:block"
+          />
+        </div>
       </section>
+
+      <Container className="mt-4">
+        <div className="flex items-center justify-center py-8">
+          <button
+            type="button"
+            onClick={() => setButtonText("all")}
+            className="uppercase text-white bg-orange hover:bg-orange/75 focus:ring-2 focus:ring-[#431d48] font-medium rounded-sm text-[12px] lg:text-lg px-4 lg:px-8 py-2 text-center inline-flex items-center  mr-2 mb-2"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            onClick={() => setButtonText("free")}
+            className="uppercase text-white bg-orange hover:bg-orange/75 focus:ring-2 focus:ring-[#431d48] font-medium rounded-sm text-[12px] lg:text-lg px-4 lg:px-8 py-2 text-center inline-flex items-center  mr-2 mb-2"
+          >
+            Free Courses
+          </button>
+          <button
+            type="button"
+            onClick={() => setButtonText("paid")}
+            className="uppercase text-white bg-orange hover:bg-orange/75 focus:ring-2 focus:ring-[#431d48] font-medium rounded-sm text-[12px] lg:text-lg px-4 lg:px-8 py-2 text-center inline-flex items-center  mr-2 mb-2"
+          >
+            Premium Courses
+          </button>
+        </div>
+        <div className="flex flex-col lg:flex-row flex-wrap justify-center ">
+          {data?.map((item, idx) => (
+            <CourseCard key={idx} course={item} />
+          ))}
+        </div>
+      </Container>
     </>
   );
 };
-
-export default CourseArea;

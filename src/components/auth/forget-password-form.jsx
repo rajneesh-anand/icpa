@@ -50,7 +50,7 @@ const ForgetPasswordForm = () => {
 
   return (
     <div className="py-6 px-5 sm:p-8 bg-fill mx-auto rounded-lg w-full sm:w-96 md:w-450px">
-      <CloseButton onClick={closeModal} />
+      <CloseButton onClick={closeModal} color="#000000" />
       <div className="text-center mb-9 pt-2.5">
         <div onClick={closeModal}>
           <Logo />

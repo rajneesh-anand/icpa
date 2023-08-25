@@ -4,7 +4,7 @@ import Eye from "@assets/icons/eye-icon";
 import EyeOff from "@assets/icons/eye-off-icon";
 
 const classes = {
-  root: "py-2 px-4 w-full appearance-none transition duration-150 ease-in-out border text-input text-13px lg:text-sm font-body rounded placeholder-[#B3B3B3] min-h-12 transition duration-200 ease-in-out text-skin-base",
+  root: "py-2 px-4 w-full appearance-none transition duration-150 ease-in-out border text-input text-13px lg:text-sm font-body rounded-sm placeholder-[#B3B3B3] min-h-12 transition duration-200 ease-in-out text-skin-base",
   normal:
     "bg-gray-100 border-gray-300 focus:shadow focus:bg-skin-fill focus:border-skin-primary",
   solid:
@@ -48,7 +48,7 @@ const PasswordInput = React.forwardRef(
         {label && (
           <label
             htmlFor={name}
-            className="block text-skin-base opacity-70 font-normal text-sm leading-none mb-3 cursor-pointer"
+            className="block text-skin-base opacity-70 font-medium text-sm leading-none mb-2 cursor-pointer"
           >
             {label}
           </label>
@@ -76,7 +76,7 @@ const PasswordInput = React.forwardRef(
             )}
           </label>
         </div>
-        {error && <p className="my-2 text-[13px] text-rose-600">{error}</p>}
+        {error && <p className="mt-1 text-[13px] text-rose-600">{error}</p>}
       </div>
     );
   }

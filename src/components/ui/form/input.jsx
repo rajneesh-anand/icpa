@@ -2,12 +2,12 @@ import cn from "classnames";
 import React from "react";
 
 const classes = {
-  root: "py-2 px-4 w-full appearance-none transition duration-150 ease-in-out border text-input text-13px lg:text-sm  rounded placeholder-[#B3B3B3] min-h-12 transition duration-200 ease-in-out text-base",
+  root: "py-2 px-4 w-full appearance-none transition duration-150 ease-in-out border text-input text-13px lg:text-sm  rounded-sm placeholder-[#B3B3B3] min-h-12 transition duration-200 ease-in-out text-base",
   normal:
     "bg-gray-100 border-gray-300 focus:shadow focus:bg-fill focus:border-primary",
   solid:
     "bg-fill border-orange focus:border-2 focus:outline-none focus:border-primary h-11 md:h-12",
-  outline: "border-gray-300 focus:border-primary",
+  outline: "border-gray-700 focus:border-primary",
   shadow: "focus:shadow",
 };
 const Input = React.forwardRef(
@@ -45,7 +45,7 @@ const Input = React.forwardRef(
         {label && (
           <label
             htmlFor={name}
-            className={`block font-normal text-sm leading-none mb-3 cursor-pointer ${
+            className={`block font-medium text-sm leading-none mb-2 cursor-pointer ${
               labelClassName || "text-base text-opacity-70"
             }`}
           >
@@ -64,7 +64,7 @@ const Input = React.forwardRef(
           aria-invalid={error ? "true" : "false"}
           {...rest}
         />
-        {error && <p className="my-2 text-[13px] text-rose-600">{error}</p>}
+        {error && <p className="mt-1 text-[13px] text-rose-600">{error}</p>}
       </div>
     );
   }

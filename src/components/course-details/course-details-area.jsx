@@ -73,7 +73,7 @@ const CourseDetailsArea = ({ data }) => {
         amount: data.amount,
         order_id: data.id,
         description: "Thank you for placing an order",
-        image: `${process.env.NEXT_PUBLIC_SITE_URL}/images/logo.jpg`,
+        image: `${process.env.NEXT_PUBLIC_SITE_URL}/images/logo.svg`,
         handler: async function (response) {
           setProcessingStatus(false);
           const bodydata = {
@@ -179,55 +179,12 @@ const CourseDetailsArea = ({ data }) => {
             </tbody>
           </table>
           <div className="mt-8">
-            {data.course_type === "free" ? (
-              <>
-                <div className="w-full text-center py-[4px] px-[16px] lg:py-[6px] lg:px-[24px] bg-[#245d51]/75 rounded-sm mb-4">
-                  <p className="text-[14px] lg:text-[18px] text-white">Free</p>
-                </div>
-
-                <div className="w-full text-center py-[4px] px-[16px] lg:py-[6px]  lg:px-[24px]  bg-orange/90 rounded-sm text-[14px] lg:text-[18px] text-white">
-                  <Link
-                    href={`/watch/${data.slug}`}
-                    className="w-full text-[14px] lg:text-[18px] text-white"
-                  >
-                    Watch Now
-                  </Link>
-                </div>
-              </>
-            ) : basePrice === price ? (
-              <>
-                <div className="w-full text-center py-[4px] px-[16px] lg:py-[6px] lg:px-[24px] bg-[#245d51]/75 rounded-sm mb-4">
-                  <p className="text-[14px] lg:text-[18px] text-white">
-                    {price}
-                  </p>
-                </div>
-
-                <button
-                  onClick={handlePayment}
-                  className="w-full text-center py-[4px] px-[16px] lg:py-[6px]  lg:px-[24px]  bg-orange/90 rounded-sm text-[14px] lg:text-[18px] text-white"
-                >
-                  {processingStatus ? "Processing ... " : "Pay Now"}
-                </button>
-              </>
-            ) : (
-              <>
-                <div className="w-full flex justify-center items-center py-[4px] px-[16px] lg:py-[6px] lg:px-[24px] bg-[#245d51]/75 rounded-sm mb-4">
-                  <p className="text-[18px] lg:text-[20px] text-white">
-                    {price}
-                  </p>
-                  <del className="ml-1 text-[12px] text-white text-opacity-70">
-                    {basePrice}
-                  </del>
-                </div>
-
-                <button
-                  onClick={handlePayment}
-                  className="w-full text-center py-[4px] px-[16px] lg:py-[6px]  lg:px-[24px]  bg-orange/90 rounded-sm text-[14px] lg:text-[18px] text-white"
-                >
-                  {processingStatus ? "Processing ... " : "Pay Now"}
-                </button>
-              </>
-            )}
+            <button
+              onClick={handlePayment}
+              className="w-full text-center py-[4px] px-[16px] lg:py-[6px]  lg:px-[24px]  bg-orange/90 rounded-sm text-[14px] lg:text-[18px] text-white"
+            >
+              {processingStatus ? "Processing ... " : "Pay Now"}
+            </button>
           </div>
         </div>
       </div>

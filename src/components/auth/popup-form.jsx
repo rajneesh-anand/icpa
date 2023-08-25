@@ -81,7 +81,7 @@ const PopUpForm = ({ isPopup = true, className }) => {
   return (
     <div
       className={cn(
-        "flex bg-fill mx-auto h-auto rounded-sm w-full lg:w-[1000px] 2xl:w-[1200px]",
+        "flex bg-fill mx-auto h-auto relative rounded-lg shadow-dropDown w-full lg:w-[1000px] 2xl:w-[1200px]",
         className
       )}
     >
@@ -170,7 +170,7 @@ const PopUpForm = ({ isPopup = true, className }) => {
                 type="submit"
                 className="inline-flex items-center justify-center w-full font-nunito px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-orange rounded-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-opacity-90"
               >
-                {processing ? "Sending... " : "Send"}
+                {processing ? "Sending... " : "Send Message"}
               </button>
             </div>
           </form>

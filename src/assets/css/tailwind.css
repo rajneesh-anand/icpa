@@ -9,6 +9,7 @@
     --color-yellow: 255, 195, 60;
     --color-base: 0, 0, 0;
     --color-fill: 255, 255, 255;
+    --color-purple: 30, 70, 158;
   }
 }
 
@@ -17,8 +18,12 @@
     @apply text-[14px] h-[40px] w-[40px] leading-[4px] bg-orange text-white text-center rounded-[50px] hover:bg-orange/75;
   }
 
+  .btn-purple {
+    @apply text-[14px] h-[36px] w-[36px] leading-[4px] bg-[#1E469E] text-white text-center rounded-[50px] hover:bg-[#1E469E]/75;
+  }
+
   .navMenu > a::before {
-    @apply absolute bg-orange;
+    @apply absolute bg-indigo-900;
     content: "";
     height: 3px;
     transition: all 0.5s ease-in-out 0.3s;

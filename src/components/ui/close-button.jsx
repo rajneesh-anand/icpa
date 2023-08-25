@@ -1,7 +1,7 @@
 import CloseIcon from "@assets/icons/close-icon";
 import cn from "classnames";
 
-const CloseButton = ({ className, onClick }) => {
+const CloseButton = ({ className, onClick, color }) => {
   return (
     <button
       onClick={onClick}
@@ -11,7 +11,7 @@ const CloseButton = ({ className, onClick }) => {
         className
       )}
     >
-      <CloseIcon className="text-xl lg:text-2xl" />
+      <CloseIcon className="text-xl lg:text-2xl" color={color} />
     </button>
   );
 };

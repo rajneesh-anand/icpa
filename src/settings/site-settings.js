@@ -8,7 +8,7 @@ export const siteSettings = {
     address: "",
   },
   logo: {
-    url: "/images/logo.jpg",
+    url: "/images/logo.svg",
     alt: "icpa-institute",
     href: "/",
   },
