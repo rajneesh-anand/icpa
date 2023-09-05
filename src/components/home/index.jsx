@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import CounterArea from "@components/common/counter-area";
-import { CourseFilter } from "./course-area";
+
 import { useModalAction } from "@components/common/modal/modal.context";
-import BannerArea from "./banner-area";
+import { BannerArea } from "./banner-area";
+import { CourseArea } from "./course-area";
+import { CourseImage } from "./course-image";
 
 const Home = () => {
   const { openModal } = useModalAction();
@@ -15,12 +17,9 @@ const Home = () => {
 
   return (
     <>
-      {/* <BannerSlider
-        banner={heroBanner}
-        contentClassName="pb-24 xl:pb-32 pt-16 xl:pt-24"
-      /> */}
       <BannerArea />
-      <CourseFilter />
+      <CourseArea />
+      <CourseImage />
       <CounterArea />
     </>
   );

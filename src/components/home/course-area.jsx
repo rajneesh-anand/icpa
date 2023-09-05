@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import CourseCard from "@components/home/course-card";
-import cn from "classnames";
 import { courseData } from "@data/course";
 import Container from "@components/ui/container";
 
-export const CourseFilter = () => {
+export const CourseArea = () => {
   const [data, setData] = useState();
   const [buttonText, setButtonText] = useState("all");
 
@@ -30,7 +29,7 @@ export const CourseFilter = () => {
         <div className="overflow-hidden">
           <img
             className="absolute inset-0 h-full w-full object-cover"
-            src="/images/img-2.jpg"
+            src="/images/banner/course-bg.jpg"
             alt="build your website image"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-indigo-800 w-full h-full opacity-90"></div>

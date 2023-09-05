@@ -207,7 +207,7 @@ const CourseCard = ({ course, className }) => {
           {course_type === "free" ? (
             <>
               <div className="w-full flex justify-center items-center py-[4px] px-[16px] lg:py-[6px] lg:px-[24px]  mb-4">
-                <span class="inline-flex items-center ml-3 uppercase gap-1.5 py-1.5 px-6 rounded-full text-xs font-medium bg-blue-500 text-white">
+                <span className="inline-flex items-center ml-3 uppercase gap-1.5 py-1.5 px-6 rounded-full text-xs font-medium bg-blue-500 text-white">
                   Free
                 </span>
               </div>
@@ -252,7 +252,7 @@ const CourseCard = ({ course, className }) => {
                 <del className="ml-1 text-[12px] text-slate-700 text-opacity-70">
                   {basePrice}
                 </del>
-                <span class="inline-flex items-center ml-3 uppercase gap-1.5 py-1.5 px-6 rounded-full text-xs font-medium bg-blue-500 text-white">
+                <span className="inline-flex items-center ml-3 uppercase gap-1.5 py-1.5 px-6 rounded-full text-xs font-medium bg-blue-500 text-white">
                   {discount} off
                 </span>
               </div>

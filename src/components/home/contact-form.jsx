@@ -72,7 +72,7 @@ const ContactForm = ({ className }) => {
   }
 
   return (
-    <div className="p-5 border bg-white shadow-lg border-indigo-900 rounded-lg text-center w-full lg:w-[320px]">
+    <div className="p-5 border bg-white shadow-lg border-indigo-900 rounded-lg text-center w-full lg:w-[320px] relative">
       <h4 className="mb-2 text-slate-700 text-sm md:text-md font-medium">
         Get free career counselling & consultation
       </h4>
