@@ -45,7 +45,7 @@ export const counter_data = [
   },
   {
     id: 7,
-    title: "ISO 9001:2008",
+    title: "ISO 9001:2015",
     count_number: null,
     thousand: null,
     icon: "/images/icon/iso.png",
