@@ -16,7 +16,7 @@ const ContactPage = () => {
         path="contact"
       />
 
-      <Container>
+      <Container className="py-8">
         <div className="pt-4">
           <Breadcrumb />
         </div>

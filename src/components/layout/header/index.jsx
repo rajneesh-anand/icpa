@@ -32,7 +32,7 @@ const Header = () => {
     <>
       <header className={sticky ? "header-sticky" : ""}>
         <div className="flex justify-between items-center h-16 relative ">
-          <div className="pl-4 md:pl-6 lg:pl-8 2xl:pl-1 lg:w-[240px] bg-white h-full flex items-center">
+          <div className="pl-4 md:pl-6 lg:pl-8 2xl:pl-1 lg:w-[240px] bg-gray-100 h-full flex items-center border-r-4 border-orange">
             <Logo />
           </div>
           <div className="hidden lg:flex lg:justify-end lg:items-center pr-4 md:pr-6 lg:pr-8 2xl:pr-1 w-full h-full bg-yellow">

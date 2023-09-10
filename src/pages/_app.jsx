@@ -45,7 +45,6 @@ const CustomApp = ({ Component, pageProps }) => {
               <Layout pageProps={pageProps}>
                 <Component {...pageProps} key={router.route} />
               </Layout>
-
               <ToastContainer />
               <ManagedModal />
               <ManagedDrawer />

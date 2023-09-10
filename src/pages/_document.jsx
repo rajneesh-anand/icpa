@@ -37,6 +37,10 @@ export default class CustomDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+          />
         </Head>
         <body>
           <Main />

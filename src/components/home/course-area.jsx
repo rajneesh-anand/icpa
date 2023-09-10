@@ -34,9 +34,9 @@ export const CourseArea = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-indigo-800 w-full h-full opacity-90"></div>
         </div>
-        <div className="container ">
+        <Container>
           <div className="lg:flex justify-center">
-            <div className="lg:w-7/12 text-center relative">
+            <div className="text-center relative">
               <div className="space-y-6">
                 <h2 className="text-white text-3xl">Explore Our Courses</h2>
                 <div className="h-0.5 bg-red-500 w-14 mx-auto"></div>
@@ -47,7 +47,7 @@ export const CourseArea = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
         <div className="absolute bottom-0 left-0 right-0">
           <img
             src="/images/bg-pattern-light.png"

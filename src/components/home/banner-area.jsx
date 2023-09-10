@@ -20,9 +20,5 @@ export const BannerArea = () => {
         <ContactForm />
       </Container>
     </div>
-    // <Container className="bg-[url('/images/banner/hero-bg.jpg')] bg-cover bg-no-repeat py-8 flex flex-col lg:flex-row  lg:justify-between ">
-    //   <HeroArea />
-    //   <ContactForm />
-    // </Container>
   );
 };

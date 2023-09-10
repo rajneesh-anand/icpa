@@ -2,8 +2,14 @@ import Carousel from "@components/ui/carousel/carousel";
 import { SwiperSlide } from "@components/ui/carousel/slider";
 import Container from "@components/ui/container";
 import Link from "@components/ui/link";
+import YoutubeIcon from "@assets/icons/youtube-icon";
+import { siteSettings } from "@settings/site-settings";
+import Image from "@components/ui/image";
+import { footer } from "@data/footer";
+const { socials } = footer;
 
 const BannerSlider = ({ banner, className, contentClassName = "py-24" }) => {
+  const channelId = siteSettings.youtube_channel_id;
   return (
     <div>
       <Carousel
@@ -14,37 +20,68 @@ const BannerSlider = ({ banner, className, contentClassName = "py-24" }) => {
         autoplay={false}
       >
         <SwiperSlide>
-          <Container>
-            <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-4 mb-8 gap-[30px]">
-              <div className="md:col-span-6 md:text-left text-center mt-4 lg:mt-24">
+          <Container className="bg-[url('/images/banner/banner-bg.jpg')]">
+            <div className="grid md:grid-cols-12 grid-cols-1 items-center py-8 lg:pb-12 gap-1">
+              <div className="md:col-span-6 md:text-left text-center">
                 <div className="md:ml-8">
-                  <h4 className="font-noto uppercase font-bold leading-normal text-4xl  mb-5 relative">
-                    Learn with{" "}
-                    <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block">
-                      <span className="relative text-white">Experts</span>
-                    </span>{" "}
-                  </h4>
-                  <h4 className="font-noto font-bold uppercase leading-normal text-4xl  mb-5 relative">
-                    {" "}
-                    Anytime &amp; Anywhere
-                  </h4>
+                  <div className="flex flex-col md:flex-row items-center ">
+                    <p className="my-2 uppercase transition-colors duration-300 nc-Badge  inline-flex px-6 md:px-3 py-2 rounded-sm font-semibold text-[12px]  text-indigo-700 bg-white ">
+                      Registered Government of NCT DELHI
+                    </p>
+                    <p className="my-2 ml-1 uppercase transition-colors duration-300 nc-Badge  inline-flex px-6 md:px-3 py-2 rounded-sm font-semibold text-[12px] text-indigo-700 bg-white ">
+                      ISO 9001:2015 Certified Institute
+                    </p>
+                  </div>
 
-                  <h4 className="font-noto font-bold uppercase leading-normal text-4xl  mb-5 relative">
-                    for{" "}
-                    <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
-                      <span className="relative text-white">FREE</span>
-                    </span>{" "}
-                  </h4>
+                  <div className="mt-8">
+                    <h1 className="font-noto text-slate-900 font-semibold text-3xl md:text-4xl md:!leading-[120%] lg:text-5xl max-w-4xl tracking-wider">
+                      Learn from <span className="text-orange"> Experts</span>
+                      {/* <span className="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-yellow relative inline-block">
+                        <span className="relative text-white">Experts</span>
+                      </span>{" "} */}
+                    </h1>
+                  </div>
 
-                  <p className="text-slate-400 text-lg max-w-xl"></p>
-                  {/* <div className="text-center mt-8">
+                  <div className="mt-4">
+                    <h1 className="text-slate-600 font-semibold text-xl md:text-4xl md:!leading-[120%] lg:text-3xl  max-w-4xl ">
+                      Anytime &amp; Anywhere at{" "}
+                      <span className="text-orange"> Free of Cost</span>
+                      {/* <span className="before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-orange relative inline-block">
+                        <span className="relative text-white">
+                          Free of Cost
+                        </span>
+                      </span>{" "} */}
+                    </h1>
+                  </div>
+                  <div className="flex items-center mt-8 lg:mt-16">
                     <Link
-                      href="/auth/register"
-                      className="inline-block px-6 py-2.5 bg-blue-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                      href={`https://www.youtube.com/@icpacomputereducation`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center my-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-sm"
                     >
-                      Get Started
+                      <YoutubeIcon color="#ffffff" className="mr-2" />
+                      Subscribe ICPA Institute Youtube channel
                     </Link>
-                  </div> */}
+
+                    {/* {socials.map((item, index) => (
+                      <Link
+                        href={item.path ? item.path : "/"}
+                        key={index}
+                        className="mx-1 transition hover:opacity-80 social-link-vertical-align "
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          height={item.height}
+                          width={item.width}
+                          className="align-middle transform scale-85 md:scale-100 "
+                        />
+                      </Link>
+                    ))} */}
+                  </div>
                 </div>
               </div>
 
@@ -53,9 +90,9 @@ const BannerSlider = ({ banner, className, contentClassName = "py-24" }) => {
                   <div className="col-span-5">
                     <div className="grid grid-cols-1 gap-4">
                       <img
-                        src="/images/banner/banner-01.png"
+                        src="/images/banner/b1.jpg"
                         className="rounded-lg"
-                        alt=""
+                        alt="banner-1"
                       />
 
                       <div className="ml-auto">
@@ -67,76 +104,9 @@ const BannerSlider = ({ banner, className, contentClassName = "py-24" }) => {
                   <div className="col-span-7">
                     <div className="grid grid-cols-1 gap-4">
                       <img
-                        src="/images/banner/banner-03.jpg"
+                        src="/images/banner/b2.jpg"
                         className="rounded-lg"
-                        alt="photo-2"
-                        height={450}
-                        width={250}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Container>
-            <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-4 mb-8 gap-[30px]">
-              <div className="md:col-span-6 md:text-left text-center mt-4 lg:mt-24">
-                <div className="md:ml-8">
-                  <h4 className="font-noto uppercase font-bold leading-normal text-4xl  mb-5 relative">
-                    Learn with{" "}
-                    <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow relative inline-block">
-                      <span className="relative text-white">Experts</span>
-                    </span>{" "}
-                  </h4>
-                  <h4 className="font-noto font-bold uppercase leading-normal text-4xl  mb-5 relative">
-                    {" "}
-                    Anytime &amp; Anywhere
-                  </h4>
-
-                  <h4 className="font-noto font-bold uppercase leading-normal text-4xl  mb-5 relative">
-                    for{" "}
-                    <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
-                      <span className="relative text-white">FREE</span>
-                    </span>{" "}
-                  </h4>
-
-                  <p className="text-slate-400 text-lg max-w-xl"></p>
-                  {/* <div className="text-center mt-8">
-                    <Link
-                      href="/auth/register"
-                      className="inline-block px-6 py-2.5 bg-blue-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-lg hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                    >
-                      Get Started
-                    </Link>
-                  </div> */}
-                </div>
-              </div>
-
-              <div className="md:col-span-6 mt-4">
-                <div className="grid grid-cols-12 gap-4 items-center">
-                  <div className="col-span-5">
-                    <div className="grid grid-cols-1 gap-4">
-                      <img
-                        src="/images/banner/banner-01.png"
-                        className="rounded-lg"
-                        alt=""
-                      />
-
-                      <div className="ml-auto">
-                        <div className="w-28 h-28 bg-indigo-600/10 rounded-lg"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-span-7">
-                    <div className="grid grid-cols-1 gap-4">
-                      <img
-                        src="/images/banner/banner-03.jpg"
-                        className="rounded-lg"
-                        alt="photo-2"
+                        alt="banner-2"
                         height={450}
                         width={250}
                       />

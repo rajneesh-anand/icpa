@@ -4,6 +4,7 @@ import cn from "classnames";
 const variantBasedClasses = {
   primary: "bg-yellow",
   purple: "bg-indigo-900",
+  orange: "bg-orange",
 };
 
 const HighlightedBar = ({ variant, onClose, children, className }) => {

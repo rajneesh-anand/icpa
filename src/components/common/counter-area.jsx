@@ -9,9 +9,9 @@ const CounterArea = ({ style_counter }) => {
   return (
     <>
       <section className="bg-gray-50 py-16 mt-8">
-        <div className="container">
+        <Container>
           <div className="flex justify-center">
-            <div className="lg:w-2/3 space-y-5 text-center">
+            <div className="space-y-5 text-center">
               <h1 className="text-2xl text-gray-800 uppercase tracking-widest dark:text-white">
                 OUR RECOGNITIONS
               </h1>
@@ -22,14 +22,14 @@ const CounterArea = ({ style_counter }) => {
               </p>
             </div>
           </div>
-        </div>
+        </Container>
         <Container>
           <section>
             <div className="grid grid-cols-12 gap-2">
               {counter_data.map((item) => (
                 <div
                   key={item.id}
-                  className="col-span-6 md:col-span-4 xl:col-span-3 shadow-md rounded-lg bg-yellow bg-opacity-25 "
+                  className="col-span-6 md:col-span-4 lg:col-span-3 shadow-md rounded-lg bg-yellow bg-opacity-25 "
                 >
                   <div className="counter-item py-16 text-center">
                     <div className="flex justify-center mb-2">

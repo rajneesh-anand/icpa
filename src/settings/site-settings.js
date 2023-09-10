@@ -18,24 +18,34 @@ export const siteSettings = {
     menu: [
       {
         id: 1,
-        path: "/courses",
-        label: "Courses",
+        path: "/",
+        label: "Home",
       },
       {
         id: 2,
-        path: "/pdf-notes",
-        label: "PDF Notes",
+        path: "/about-us",
+        label: "About Us",
       },
 
       {
         id: 3,
-        path: "/online-test",
-        label: "Online Test",
+        path: "/free-courses",
+        label: "Free Courses",
       },
       {
         id: 4,
-        path: "/free-courses",
-        label: "Free Courses",
+        path: "/premium-courses",
+        label: "Premium Cources",
+      },
+      {
+        id: 5,
+        path: "/students",
+        label: "Our Students",
+      },
+      {
+        id: 6,
+        path: "/franchise",
+        label: "Franchise from Home",
       },
 
       // {

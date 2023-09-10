@@ -14,9 +14,9 @@ export const CourseImage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-indigo-800 w-full h-full opacity-90"></div>
         </div>
-        <div className="container ">
+        <Container>
           <div className="lg:flex justify-center">
-            <div className="lg:w-7/12 text-center relative">
+            <div className="text-center relative">
               <div className="space-y-6">
                 <h2 className="text-white text-3xl">Our Courses</h2>
                 <div className="h-0.5 bg-red-500 w-14 mx-auto"></div>
@@ -27,7 +27,7 @@ export const CourseImage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
         <div className="absolute bottom-0 left-0 right-0">
           <img
             src="/images/bg-pattern-light.png"
@@ -44,7 +44,7 @@ export const CourseImage = () => {
 
       <Container className="mt-4">
         <div className="grid grid-cols-12 gap-2">
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a1.jpg"
               alt="course image"
@@ -53,7 +53,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a2.jpg"
               alt="course image"
@@ -62,7 +62,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a3.jpg"
               alt="course image"
@@ -71,7 +71,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a4.jpg"
               alt="course image"
@@ -80,7 +80,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a5.jpg"
               alt="course image"
@@ -89,7 +89,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a6.jpg"
               alt="course image"
@@ -98,7 +98,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a7.jpg"
               alt="course image"
@@ -107,7 +107,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a8.jpg"
               alt="course image"
@@ -116,7 +116,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a9.jpg"
               alt="course image"
@@ -125,7 +125,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a10.jpg"
               alt="course image"
@@ -134,7 +134,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a11.jpg"
               alt="course image"
@@ -143,7 +143,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a12.jpg"
               alt="course image"
@@ -152,7 +152,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a13.jpg"
               alt="course image"
@@ -161,7 +161,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a14.jpg"
               alt="course image"
@@ -170,7 +170,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a15.jpg"
               alt="course image"
@@ -179,7 +179,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a16.jpg"
               alt="course image"
@@ -188,7 +188,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a17.jpg"
               alt="course image"
@@ -197,7 +197,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a18.jpg"
               alt="course image"
@@ -206,7 +206,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a19.jpg"
               alt="course image"
@@ -215,7 +215,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a20.jpg"
               alt="course image"
@@ -224,7 +224,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a21.jpg"
               alt="course image"
@@ -233,7 +233,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 xl:col-span-4 ">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a22.jpg"
               alt="course image"

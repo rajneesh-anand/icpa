@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import BackToTop from "@components/scroll-top";
+// import BackToTop from "@components/scroll-top";
 import Footer from "@components/layout/footer";
 import Header from "@components/layout/header";
-import { animationCreate } from "@utils/animate";
+import { animation } from "@utils/animate";
 import { useSessionStorage } from "react-use";
 import HighlightedBar from "@components/common/highlighted-bar";
-import Link from "@components/ui/link";
+// import Link from "@components/ui/link";
 import { WhatsAppWidget } from "react-whatsapp-widget";
 import "react-whatsapp-widget/dist/index.css";
 
@@ -14,11 +14,16 @@ const Layout = ({ children }) => {
     "topbar",
     "false"
   );
+
   useEffect(() => {
-    setTimeout(() => {
-      animationCreate();
-    }, 500);
+    animation();
   }, []);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     animationCreate();
+  //   }, 500);
+  // }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -28,10 +33,11 @@ const Layout = ({ children }) => {
           onClose={() => setHighlightedBar("true")}
           className="text-white"
         >
-          <div className="text-[12px] lg:text-[14px] font-medium py-0.5 pr-6">
-            <span>
+          <div className="text-[12px] lg:text-[14px] py-0.5 pr-6 ">
+            <span className="tracking-wider font-medium wow fadeInUp delay-0-4s">
               Are you confused about right course for better job opportunities ?
-              Get free consultation By Vinay Sir
+              Get free consultation by Vinay Sir +91-7011898821 and make your
+              future bright
               {/* <Link
                 href="/"
                 className="inline-flex text-xs uppercase font-bold pl-1.5 items-center relative transition-all top-[1px] hover:opacity-80"
@@ -53,7 +59,6 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-
       <Footer />
       {/* <BackToTop /> */}
       <WhatsAppWidget
