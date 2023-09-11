@@ -60,7 +60,7 @@ export default function PlayList({ mediaData }) {
                       >
                         {open && (
                           <Disclosure.Panel static>
-                            <div className="px-4 pb-2 leading-7">
+                            <div className="px-4 pb-2 ">
                               {item.unit_chapters.map((itm, idx) => (
                                 <div
                                   key={idx}
@@ -75,7 +75,9 @@ export default function PlayList({ mediaData }) {
                                     Play
                                     <i className="fi fi-rr-play-alt  font-semibold text-[18px] h-4 w-4 ml-1"></i>
                                   </button>
-                                  <p className="ml-2">{itm.chapter_name}</p>
+                                  <p className="ml-2 text-[14px] font-medium">
+                                    {itm.chapter_name}
+                                  </p>
                                 </div>
                               ))}
                             </div>

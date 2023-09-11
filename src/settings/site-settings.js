@@ -45,7 +45,7 @@ export const siteSettings = {
       {
         id: 6,
         path: "/franchise",
-        label: "Franchise from Home",
+        label: "Franchise Workk from Home",
       },
 
       // {

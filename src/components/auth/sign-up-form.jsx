@@ -3,12 +3,8 @@ import Input from "@components/ui/form/input";
 import PasswordInput from "@components/ui/form/password-input";
 import { useForm, Controller } from "react-hook-form";
 import Logo from "@components/ui/logo";
-import Alert from "@components/ui/alert";
-import Image from "@components/ui/image";
 import { useModalAction } from "@components/common/modal/modal.context";
 import CloseButton from "@components/ui/close-button";
-import cn from "classnames";
-import PhoneInputWithCountry from "@components/ui/form/phone-input";
 import MobileInput from "@components/ui/form/mobile-input";
 
 const SignUpForm = ({ isPopup = true, className }) => {
@@ -34,7 +30,6 @@ const SignUpForm = ({ isPopup = true, className }) => {
     formData.append("email", email);
     formData.append("password", password);
     formData.append("mobile", mobile);
-
     formData.append("userType", "Customer");
     try {
       const res = await fetch(

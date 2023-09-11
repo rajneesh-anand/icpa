@@ -24,13 +24,17 @@ const BannerSlider = ({ banner, className, contentClassName = "py-24" }) => {
             <div className="grid md:grid-cols-12 grid-cols-1 items-center py-8 lg:pb-12 gap-1">
               <div className="md:col-span-6 md:text-left text-center">
                 <div className="md:ml-8">
-                  <div className="flex flex-col md:flex-row items-center ">
-                    <p className="my-2 uppercase transition-colors duration-300 nc-Badge  inline-flex px-6 md:px-3 py-2 rounded-sm font-semibold text-[12px]  text-indigo-700 bg-white ">
-                      Registered Government of NCT DELHI
-                    </p>
-                    <p className="my-2 ml-1 uppercase transition-colors duration-300 nc-Badge  inline-flex px-6 md:px-3 py-2 rounded-sm font-semibold text-[12px] text-indigo-700 bg-white ">
-                      ISO 9001:2015 Certified Institute
-                    </p>
+                  <div className="flex flex-col md:flex-row items-center">
+                    <div className="mb-2 shadow-dropDown bg-gradient-to-r from-red-600 to-amber-800  rounded-sm">
+                      <p className="uppercase transition-colors duration-300 px-6 md:px-3 py-2 font-semibold text-[12px] text-white ">
+                        Registered Government of NCT of DELHI
+                      </p>
+                    </div>
+                    <div className="mb-2 shadow-dropDown bg-gradient-to-r from-amber-800 to-red-600  rounded-sm lg:ml-1">
+                      <p className="uppercase transition-colors duration-300 px-6 md:px-3 py-2 font-semibold text-[12px] text-white ">
+                        ISO 9001:2015 Certified Institute
+                      </p>
+                    </div>
                   </div>
 
                   <div className="mt-8">
@@ -104,11 +108,18 @@ const BannerSlider = ({ banner, className, contentClassName = "py-24" }) => {
                   <div className="col-span-7">
                     <div className="grid grid-cols-1 gap-4">
                       <img
-                        src="/images/banner/b2.jpg"
+                        src="/images/students/12.jpeg"
+                        className="rounded-lg"
+                        alt="banner-2"
+                        height={480}
+                        width={280}
+                      />
+                      <img
+                        src="/images/students/20.jpeg"
                         className="rounded-lg"
                         alt="banner-2"
                         height={450}
-                        width={250}
+                        width={280}
                       />
                     </div>
                   </div>
