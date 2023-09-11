@@ -35,7 +35,7 @@ export const siteSettings = {
       {
         id: 4,
         path: "/premium-courses",
-        label: "Premium Cources",
+        label: "Premium Courses",
       },
       {
         id: 5,
