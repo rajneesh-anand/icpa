@@ -182,6 +182,16 @@ const SignUpForm = ({ isPopup = true, className }) => {
         </div>
       </div>
 
+      {error && (
+        <Alert
+          message={error}
+          variant="error"
+          closeable={true}
+          className="my-2"
+          onClose={() => setError(null)}
+        />
+      )}
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-center"
@@ -228,6 +238,11 @@ const SignUpForm = ({ isPopup = true, className }) => {
             error={errors.password?.message}
             {...register("password", {
               required: "password is required !",
+              pattern: {
+                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+                message:
+                  "пароль должен содержать минимум 8 символов, хотя бы одну заглавную и строчную букву",
+              },
             })}
           />
 
