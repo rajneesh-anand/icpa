@@ -62,7 +62,7 @@ export const CourseImage = () => {
               className="object-fill shadow-md rounded-sm"
             />
           </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
+          {/* <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a3.jpg"
               alt="course image"
@@ -70,7 +70,7 @@ export const CourseImage = () => {
               quality={100}
               className="object-fill shadow-md rounded-sm"
             />
-          </div>
+          </div> */}
           <div className="col-span-12 md:col-span-6 lg:col-span-4 ">
             <img
               src="/images/course/a4.jpg"
