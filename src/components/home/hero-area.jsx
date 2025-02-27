@@ -1,43 +1,125 @@
 import React from "react";
-import { siteSettings } from "@settings/site-settings";
+import Container from "@components/ui/container";
 import Link from "@components/ui/link";
 import YoutubeIcon from "@assets/icons/youtube-icon";
+import Instagram from "@assets/icons/instagram";
+import Youtube from "@assets/icons/youtube";
+import { motion } from "framer-motion";
+import { FadeIn, FadeInStagger } from "@components/common/fade-in";
 
 export default function HeroArea() {
-  const channelId = siteSettings.youtube_channel_id;
   return (
-    <div className="lg:px-8 lg:w-2/3 text-center lg:text-left relative">
-      <p className="mt-8 transition-colors duration-300 nc-Badge  inline-flex px-8 py-2 rounded-full font-semibold text-md  text-indigo-700 bg-white ">
-        Recognised by Indian Government
-      </p>
+    <Container>
+      <div className="grid md:grid-cols-12 grid-cols-1 pt-16 gap-8 ">
+        <div className="md:col-span-7">
+          <div className="flex flex-col md:flex-row items-center ">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="mb-4 uppercase font-semibold text-[14px] md:text-xs text-red-600"
+            >
+              Registered Government of NCT of DELHI
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="mb-4 md:ml-4 uppercase font-semibold text-[14px] md:text-xs text-red-600"
+            >
+              ISO 9001:2015 Certified Institute
+            </motion.p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-center md:text-start my-8"
+          >
+            <h1 className="uppercase leading-tight text-slate-900 font-semibold text-4xl  lg:text-[68px] max-w-4xl tracking-tight">
+              Learn from <span className="text-orange"> Experts</span>
+            </h1>
+            <h1 className="text-slate-600 uppercase font-semibold text-xl md:text-2xl  lg:text-4xl  max-w-4xl tracking-tight ">
+              Anytime &amp; Anywhere at{" "}
+              <span className="animate-pulse tracking-wide inline bg-gradient-1 bg-clip-text text-transparent">
+                Free of Cost
+              </span>
+            </h1>
+          </motion.div>
 
-      <div className="mt-8">
-        <h1 className="font-noto text-slate-900 font-semibold text-3xl md:text-4xl md:!leading-[120%] lg:text-5xl max-w-4xl ">
-          Learn from Experts
-        </h1>
-      </div>
-      <div className="mb-8">
-        <h1 className="text-slate-600 font-semibold text-3xl md:text-4xl md:!leading-[120%] lg:text-3xl  max-w-4xl ">
-          Anytime &amp; Anywhere at Free of Cost
-        </h1>
-      </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-wrap items-center justify-center md:justify-start"
+          >
+            <Link
+              href="https://www.youtube.com/@icpacomputereducation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:mb-6 md:mr-6  inline-flex md:h-[60px] h-[48px] items-center rounded-md bg-black px-[30px] py-[14px] text-white hover:bg-opacity-90 dark:bg-white dark:text-black dark:hover:bg-opacity-90"
+            >
+              <span className="mr-[18px] border-r border-stroke border-opacity-40 pr-[18px] leading-relaxed dark:border-[#BDBDBD]">
+                Subscribe ICPA Youtube Channel
+              </span>
+              <span>
+                <YoutubeIcon color="#ffffff" className="mr-2 h-8 w-8" />
+              </span>
+            </Link>
+            <Link
+              href="https://www.instagram.com/icpacomputereducation/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="md:mb-6 inline-flex items-center py-4 text-black hover:text-primary dark:text-white dark:hover:text-primary"
+            >
+              <span className="md:mr-[18px] mr-[12px] flex h-[60px] w-[60px] items-center justify-center rounded-full border-2 border-slate-200">
+                <Instagram className="h-10 w-10" />
+              </span>
+              <span class="text-base font-medium">
+                <span class="block text-sm"> Watch Video </span>Instagram
+              </span>
+            </Link>
+          </motion.div>
+        </div>
 
-      {/* <div className="border-t bg-orange h-[2.5px]"></div> */}
-      <Link
-        href={`https://www.youtube.com/channel/${channelId}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center my-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-sm"
-      >
-        <YoutubeIcon color="#ffffff" className="mr-2" />
-        Subscribe ICPA Institute Youtube channel
-      </Link>
-      {/* <img
-        src="/images/icon/iso.png"
-        alt="iso image"
-        height={112}
-        width={112}
-      /> */}
-    </div>
+        <div className="md:col-span-5 ">
+          <FadeInStagger
+            faster
+            className="grid grid-cols-2 gap-3 h-3/4 md:mx-8
+            "
+          >
+            <FadeIn className="relative overflow-hidden rounded">
+              <img
+                className="w-full object-cover"
+                src="/images/banner/b1.jpg"
+                alt="banner-1"
+              />
+            </FadeIn>
+
+            <FadeIn className="relative overflow-hidden rounded">
+              <img
+                className="w-full object-fit"
+                src="/images/students/12.jpeg"
+                alt="banner-1"
+              />
+            </FadeIn>
+            <FadeIn className="relative overflow-hidden rounded">
+              <img
+                className="w-full object-contain"
+                src="/images/students/20.jpeg"
+                alt="banner-1"
+              />
+            </FadeIn>
+            <FadeIn className="relative overflow-hidden rounded">
+              <img
+                className="w-full"
+                src="/images/students/2.jpeg"
+                alt="banner-1"
+              />
+            </FadeIn>
+          </FadeInStagger>
+        </div>
+      </div>
+    </Container>
   );
 }

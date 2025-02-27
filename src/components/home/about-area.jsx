@@ -22,16 +22,22 @@ const shape_img = [
 
 // about info
 const about_info = {
-    img_1: "/assets/img/about/about-img.png",
-    img_2: "/assets/img/about/about-shape-01.png",
-    img_3: "/assets/img/about/about-shape-02.png",
-    about_title: "About Our Courses",
-    sub_title:"Explore Thousands of Creative Classes.",
-    des: <>Dramatically supply transparent deliverables beforese backward comp internal or "organic" sources. Comp  transparent leverage other.</>,
-    about_btn: "Read More"
-}
+  img_1: "/assets/img/about/about-img.png",
+  img_2: "/assets/img/about/about-shape-01.png",
+  img_3: "/assets/img/about/about-shape-02.png",
+  about_title: "About Our Courses",
+  sub_title: "Explore Thousands of Creative Classes.",
+  des: (
+    <>
+      Dramatically supply transparent deliverables beforese backward comp
+      internal or "organic" sources. Comp transparent leverage other.
+    </>
+  ),
+  about_btn: "Read More",
+};
 
-const {img_1, img_2, img_3, about_title, sub_title, des, about_btn} = about_info
+const { img_1, img_2, img_3, about_title, sub_title, des, about_btn } =
+  about_info;
 
 const AboutArea = () => {
   return (
@@ -55,19 +61,10 @@ const AboutArea = () => {
                       className={item.cls}
                     />
                   ))}
-                
                 </div>
                 <div className="tp-about-shape  d-none d-xl-block">
-                  <img
-                    src={img_2}
-                    alt="about-shape"
-                    className="a-shape-one"
-                  />
-                  <img
-                    src={img_3}
-                    alt="about-shape"
-                    className="a-shape-two"
-                  />
+                  <img src={img_2} alt="about-shape" className="a-shape-one" />
+                  <img src={img_3} alt="about-shape" className="a-shape-two" />
                 </div>
               </div>
             </div>
@@ -75,12 +72,8 @@ const AboutArea = () => {
               <div className="tp-about-content pb-30 ml-80">
                 <div className="section-title mb-55">
                   <span className="tp-sub-title mb-20">{about_title}</span>
-                  <h2 className="tp-section-title mb-15">
-                   {sub_title}
-                  </h2>
-                  <p>
-                    {des}
-                  </p>
+                  <h2 className="tp-section-title mb-15">{sub_title}</h2>
+                  <p>{des}</p>
                 </div>
                 <div className="about-btn">
                   <Link href="/about" className="tp-btn">

@@ -48,7 +48,7 @@ export const CourseArea = () => {
             </div>
           </div>
         </Container>
-        <div className="absolute bottom-0 left-0 right-0">
+        {/* <div className="absolute bottom-0 left-0 right-0">
           <img
             src="/images/bg-pattern-light.png"
             alt="bg-pattern-light"
@@ -59,7 +59,7 @@ export const CourseArea = () => {
             alt="bg-pattern-light"
             className="hidden dark:block"
           />
-        </div>
+        </div> */}
       </section>
 
       <Container className="mt-4">

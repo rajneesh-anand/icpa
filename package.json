@@ -21,6 +21,7 @@
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
     "dayjs": "^1.10.7",
+    "framer-motion": "^12.4.7",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",

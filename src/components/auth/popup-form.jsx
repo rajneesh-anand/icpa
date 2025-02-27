@@ -92,7 +92,7 @@ const PopUpForm = ({ isPopup = true, className }) => {
           <Input
             label="Full Name"
             type="text"
-            placeholder="enter your name !"
+            placeholder="Enter your full name !"
             className="col-span-12 lg:col-span-6 mb-2"
             variant="outline"
             {...register("name", {

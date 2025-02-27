@@ -4,8 +4,9 @@ import { useModalAction } from "@components/common/modal/modal.context";
 import { CourseArea } from "./course-area";
 import { CourseImage } from "./course-image";
 import { ContactArea } from "./contact-area";
-import BannerSlider from "./banner-slider";
+
 import StudentsArea from "./students-area";
+import HeroArea from "./hero-area";
 
 const Home = () => {
   const { openModal } = useModalAction();
@@ -18,7 +19,8 @@ const Home = () => {
 
   return (
     <>
-      <BannerSlider />
+      {/* <BannerSlider /> */}
+      <HeroArea />
       {/* <BannerArea /> */}
       <CourseArea />
       <CourseImage />

@@ -1,66 +1,31 @@
 import { useEffect } from "react";
-// import BackToTop from "@components/scroll-top";
 import Footer from "@components/layout/footer";
 import Header from "@components/layout/header";
-import { animation } from "@utils/animate";
-import { useSessionStorage } from "react-use";
-import HighlightedBar from "@components/common/highlighted-bar";
-// import Link from "@components/ui/link";
 import { WhatsAppWidget } from "react-whatsapp-widget";
 import "react-whatsapp-widget/dist/index.css";
 
 const Layout = ({ children }) => {
-  const [highlightedBar, setHighlightedBar] = useSessionStorage(
-    "topbar",
-    "false"
-  );
-
-  useEffect(() => {
-    animation();
-  }, []);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     animationCreate();
-  //   }, 500);
-  // }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
-      {highlightedBar !== "true" && (
-        <HighlightedBar
-          variant="purple"
-          onClose={() => setHighlightedBar("true")}
-          className="text-white"
-        >
-          <div className="text-[12px] lg:text-[14px] py-0.5 pr-6 ">
-            <span className="tracking-wider font-medium wow fadeInUp delay-0-4s">
-              Are you confused about right course for better job opportunities ?
-              Get free consultation by Vinay Sir +91-7011898821 and make your
-              future bright
-              {/* <Link
-                href="/"
-                className="inline-flex text-xs uppercase font-bold pl-1.5 items-center relative transition-all top-[1px] hover:opacity-80"
-              >
-                <span className="border-b border-[#460135] inline-block pb-0.5">
-                  Learn More
-                </span>
-                <i className="fi fi-rr-arrow-circle-right"></i>
-              </Link> */}
-            </span>
-          </div>
-        </HighlightedBar>
-      )}
+      <div className="w-full min-h-[32px] py-1 px-4 md:px-6 lg:px-8 flex items-center justify-center relative bg-indigo-900">
+        <p className="text-[12px] lg:text-[14px] tracking-wide font-medium text-white uppercase">
+          Are you confused about right course for better job opportunities ? Get
+          free consultation by Vinay Sir +91-7011898821 and make your future
+          bright
+        </p>
+      </div>
+
       <Header />
       <main
         style={{
           WebkitOverflowScrolling: "touch",
         }}
+        // className="bg-gradient-to-r from-[#ebeff8] to-[#f8f4ec]"
+        className="backgroundBanner"
       >
         {children}
       </main>
       <Footer />
-      {/* <BackToTop /> */}
       <WhatsAppWidget
         phoneNumber="919999210504"
         companyName="ICPA Institute"
