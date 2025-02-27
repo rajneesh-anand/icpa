@@ -26,8 +26,8 @@ const Instagram = ({ color, ...rest }) => {
           r="113.963"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop>
-          <stop offset="1" stop-color="#8c3aaa"></stop>
+          <stop offset=".64" stopColor="#8c3aaa" stopOpacity="0"></stop>
+          <stop offset="1" stopColor="#8c3aaa"></stop>
         </radialGradient>
       </defs>
       <path

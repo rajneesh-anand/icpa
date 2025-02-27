@@ -2,6 +2,7 @@ import React from "react";
 import Count from "./count";
 import Container from "@components/ui/container";
 import { counter_data } from "@data/counter";
+import { FadeIn, FadeInStagger } from "@components/common/fade-in";
 
 // counter data
 
@@ -24,7 +25,51 @@ const CounterArea = ({ style_counter }) => {
           </div>
         </Container>
         <Container>
-          <section>
+          <FadeInStagger faster className="grid grid-cols-12 gap-2 ">
+            {counter_data.map((item, index) => (
+              <FadeIn
+                key={index}
+                className="col-span-6 md:col-span-4 lg:col-span-3 shadow-md rounded-lg bg-yellow bg-opacity-25 "
+              >
+                <div className="counter-item py-16 text-center">
+                  <div className="flex justify-center mb-2">
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      height={112}
+                      width={112}
+                    />
+                  </div>
+                  <div className="counter-item__content">
+                    {item.count_number && (
+                      <h4 className="counter-item__title">
+                        <span className="counter">
+                          <Count
+                            add_style={true}
+                            number={item.count_number}
+                            text={item.thousand}
+                          />
+                        </span>
+                      </h4>
+                    )}
+                    <p className="uppercase font-semibold text-[12px] lg:text-[16px]">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+
+          {/* <section>
+
+
+
+
+
+
+
+
             <div className="grid grid-cols-12 gap-2">
               {counter_data.map((item) => (
                 <div
@@ -33,7 +78,6 @@ const CounterArea = ({ style_counter }) => {
                 >
                   <div className="counter-item py-16 text-center">
                     <div className="flex justify-center mb-2">
-                      {/* <i className={item.icon}></i> */}
                       <img
                         src={item.icon}
                         alt={item.title}
@@ -61,7 +105,7 @@ const CounterArea = ({ style_counter }) => {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
         </Container>
       </section>
     </>

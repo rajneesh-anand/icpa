@@ -75,8 +75,8 @@ export default function HeroArea() {
               <span className="md:mr-[18px] mr-[12px] flex h-[60px] w-[60px] items-center justify-center rounded-full border-2 border-slate-200">
                 <Instagram className="h-10 w-10" />
               </span>
-              <span class="text-base font-medium">
-                <span class="block text-sm"> Watch Video </span>Instagram
+              <span className="text-base font-medium">
+                <span className="block text-sm"> Watch Video </span>Instagram
               </span>
             </Link>
           </motion.div>
