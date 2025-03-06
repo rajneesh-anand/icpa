@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CounterArea from "@components/common/counter-area";
 import { useModalAction } from "@components/common/modal/modal.context";
-import { CourseArea } from "./course-area";
+// import { CourseArea } from "./course-area";
 import { CourseImage } from "./course-image";
 import { ContactArea } from "./contact-area";
 
@@ -22,7 +22,7 @@ const Home = () => {
       {/* <BannerSlider /> */}
       <HeroArea />
       {/* <BannerArea /> */}
-      <CourseArea />
+      {/* <CourseArea /> */}
       <CourseImage />
       <CounterArea />
       <StudentsArea />

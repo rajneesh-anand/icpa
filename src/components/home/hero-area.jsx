@@ -99,21 +99,21 @@ export default function HeroArea() {
             <FadeIn className="relative overflow-hidden rounded">
               <img
                 className="w-full object-fit"
-                src="/images/students/12.jpeg"
+                src="/images/students/stu-12.jpg"
                 alt="banner-1"
               />
             </FadeIn>
             <FadeIn className="relative overflow-hidden rounded">
               <img
                 className="w-full object-contain"
-                src="/images/students/20.jpeg"
+                src="/images/students/stu-20.jpg"
                 alt="banner-1"
               />
             </FadeIn>
             <FadeIn className="relative overflow-hidden rounded">
               <img
                 className="w-full"
-                src="/images/students/2.jpeg"
+                src="/images/students/stu-6.jpg"
                 alt="banner-1"
               />
             </FadeIn>

@@ -5,13 +5,13 @@ import Container from "@components/ui/container";
 
 export const ContactArea = () => {
   return (
-    <Container className="py-8">
+    <Container className="py-8 mt-8">
       <div className="flex justify-center">
         <div className="lg:w-2/3 space-y-5 text-center">
-          <h1 className="text-2xl text-gray-800  tracking-wide font-medium">
+          <h1 className="text-2xl text-gray-800  tracking-wide font-medium uppercase">
             Find ICPA Institute on Google Map
           </h1>
-          <div className="h-0.5 bg-red-500 w-[320px] mx-auto"></div>
+          <div className="h-0.5 bg-red-500 w-[400px] mx-auto"></div>
           {/* <p className="text-gray-400 dark:text-gray-300/60">
             We thrive when coming up with innovative ideas but also understand
             that a smart concept should be supported with faucibus sapien odio

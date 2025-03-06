@@ -1,17 +1,13 @@
 import Layout from "@components/layout";
 import Seo from "@components/seo/seo";
-import { useState, useEffect } from "react";
-import CourseCard from "@components/home/course-card";
-import { courseData } from "@data/course";
+import React from "react";
 import Container from "@components/ui/container";
+import useMasonry from "@utils/use-masonry";
+import { studentImage } from "@data/constant";
+import { FadeIn, FadeInStagger } from "@components/common/fade-in";
 
 export default function StudentsPage() {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    const filterData = courseData.filter((item) => item.course_type === "free");
-    setData(filterData);
-  }, []);
+  const masonryContainer = useMasonry();
 
   return (
     <>
@@ -32,7 +28,9 @@ export default function StudentsPage() {
           <div className="lg:flex justify-center">
             <div className="text-center relative">
               <div className="space-y-6">
-                <h2 className="text-white text-3xl">Our Proud Students</h2>
+                <h2 className="text-white text-3xl tracking-wide uppercase">
+                  Our Proud Students
+                </h2>
                 <div className="h-0.5 bg-red-500 w-[320px] mx-auto"></div>
               </div>
             </div>
@@ -51,201 +49,22 @@ export default function StudentsPage() {
           />
         </div>
       </section>
-
-      <Container className="mt-4">
-        <section>
-          <div className="grid grid-cols-12 gap-2">
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/1.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/2.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/3.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/4.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/5.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/6.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/7.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/8.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/9.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/10.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/11.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/12.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/13.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/14.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/15.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/16.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/17.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/18.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/19.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/20.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-4 shadow-md rounded-sm bg-indigo-100 bg-opacity-25 ">
-              <img
-                src="/images/students/21.jpeg"
-                alt="student image"
-                layout="fill"
-                quality={100}
-                className="object-cover rounded-sm h-48 lg:h-64 w-full"
-              />
-            </div>
-          </div>
-        </section>
+      <Container className="my-8">
+        <div
+          ref={masonryContainer}
+          className="grid items-start gap-4 sm:grid-cols-3 lg:grid-cols-4 md:gap-6"
+        >
+          {studentImage.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt="student image"
+              layout="fill"
+              quality={100}
+              className="object-fill rounded-sm w-full"
+            />
+          ))}
+        </div>
       </Container>
     </>
   );
